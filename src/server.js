@@ -1,10 +1,12 @@
 const express = require("express");
+require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 8000;
 const mongoose = require("mongoose");
+const password = process.env.API_KEY;
+const dbUrl = `mongodb+srv://Auction:${password}@cluster0.tzzkwds.mongodb.net/?retryWrites=true&w=majority`;
+console.log(dbUrl);
 
-const dbUrl =
-  "mongodb+srv://Auction:DaWcvAENC9JnSPbi@cluster0.tzzkwds.mongodb.net/?retryWrites=true&w=majority";
 const connectionParams = {
   useNewUrlParser: true, // Corrected typo here: 'useNewUrlPaser' to 'useNewUrlParser'
   useUnifiedTopology: true,
