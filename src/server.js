@@ -16,7 +16,6 @@ mongoose
     console.log("Connected to database");
   })
   .catch((error) => {
-    // Corrected the syntax here: 'error;' to '(error) => { console.log(error); }'
     console.log(error);
   });
 
